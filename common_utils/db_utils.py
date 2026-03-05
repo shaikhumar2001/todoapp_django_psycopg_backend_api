@@ -5,6 +5,8 @@ from typing import List, Any
 from pprint import pprint
 
 db_sett = settings.DATABASES["default"]
+
+
 class DBHelper:
     # initialize
     def __init__(self):
@@ -25,7 +27,7 @@ class DBHelper:
             return None
 
     # execute query
-    def execute_query(self, query: str=None, params: List[Any]=None) -> List[Any]:
+    def execute_query(self, query: str = None, params: List[Any] = None) -> List[Any]:
         print(f"QUERY: {str(query)}")
         print(f"PARAMS: {str(params)}")
         conn = self._get_connection()
